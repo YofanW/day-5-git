@@ -16,6 +16,9 @@ class BangunDatar:
     def luas_bgndatar():  # untuk menghitung luas
         pass
 
+    def hitung_keliling():
+        pass
+
 
 """Membuat child class"""
 
@@ -24,30 +27,52 @@ class Persegi(BangunDatar):
     def luas_bgndatar(self, sisi):
         self.luas = sisi**2
         return self.luas
+        
+    def hitung_keliling(self, sisi):
+        self.keliling = sisi * 4
+        return self.keliling
 
 
 class PersegiPanjang(BangunDatar):
     def luas_bgndatar(self, panjang, lebar):
         self.luas = panjang * lebar
         return self.luas
+    
+    def hitung_keliling(self, panjang, lebar):
+        self.keliling = (2 * panjang) + (2 * lebar)
+        return self.keliling
 
 
 class Segitiga(BangunDatar):
     def luas_bgndatar(self, alas, tinggi):
         self.luas = 0.5 * alas * tinggi
         return self.luas
+    
+    def hitung_keliling(self, sisi1, sisi2, sisi3):
+        self.keliling = sisi1 + sisi2 + sisi3
+        return self.keliling
 
 
 class Lingkaran(BangunDatar):
     def luas_bgndatar(self, jari):
         self.luas = 3.14 * jari**2
         return self.luas
+    
+    def hitung_keliling(self,r):
+        self.keliling = (r*2) * 3.14
+        return self.keliling
 
 
 class Trapesium(BangunDatar):
     def luas_bgndatar(self, sisi1, sisi2, tinggi):
         self.luas = 0.5 * sisi1 * sisi2 * tinggi
         return self.luas
+    
+    def hitung_keliling(self, sisi1, sisi2, sisi3, sisi4):
+        self.keliling = sisi1 + sisi2 + sisi3 + sisi4
+        return self.keliling
+
+
 
 
 """# Menghitung luas masing - masing bangun datar
@@ -57,18 +82,23 @@ class Trapesium(BangunDatar):
 
 persegi1 = Persegi()
 persegi1.luas_bgndatar(10)
+persegi1.hitung_keliling(10)
 
 persegi_panjang1 = PersegiPanjang()
 persegi_panjang1.luas_bgndatar(10, 20)
+persegi_panjang1.hitung_keliling(10, 20)
 
 segitiga1 = Segitiga()
 segitiga1.luas_bgndatar(10, 25)
+segitiga1.hitung_keliling(5, 5, 5)
 
 lingkaran1 = Lingkaran()
 lingkaran1.luas_bgndatar(10)
+lingkaran1.hitung_keliling(10)
 
 trapesium1 = Trapesium()
 trapesium1.luas_bgndatar(10, 12, 8)
+trapesium1.hitung_keliling(5, 5, 6, 6)
 
 """# Mengurutkan luas bangun datar
 
@@ -91,3 +121,28 @@ print(bangun_datar)
 
 total_luas = sum(bangun_datar)
 print(total_luas)
+
+
+
+"""# Mengurutkan keliling bangun datar
+
+Mengurutkan keliling bangun datar menggunakan method sort
+"""
+
+keliling_bangun_datar = [
+    persegi1.keliling,
+    persegi_panjang1.keliling,
+    segitiga1.keliling,
+    lingkaran1.keliling,
+    trapesium1.keliling,
+]
+
+print(keliling_bangun_datar)
+
+keliling_bangun_datar.sort()
+print(keliling_bangun_datar)
+
+"""# Menjumlah semua luas bangun datar"""
+
+total_keliling = sum(keliling_bangun_datar)
+print(total_keliling)
