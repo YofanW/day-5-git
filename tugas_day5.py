@@ -146,3 +146,28 @@ print(keliling_bangun_datar)
 
 total_keliling = sum(keliling_bangun_datar)
 print(total_keliling)
+
+
+
+"""# Mengurutkan keliling bangun datar
+
+Mengurutkan keliling bangun datar menggunakan method sort
+"""
+
+keliling_bangun_datar = [
+    persegi1.keliling,
+    persegi_panjang1.keliling,
+    segitiga1.keliling,
+    lingkaran1.keliling,
+    trapesium1.keliling,
+]
+
+print(keliling_bangun_datar)
+
+keliling_bangun_datar.sort()
+print(keliling_bangun_datar)
+
+"""# Menjumlah semua luas bangun datar"""
+
+total_keliling = sum(keliling_bangun_datar)
+print(total_keliling)
