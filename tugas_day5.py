@@ -13,7 +13,7 @@ Membuat parent class
 
 
 class BangunDatar:
-    def hitung_luas():  # untuk menghitung luas
+    def luas_bgndatar():  # untuk menghitung luas
         pass
 
 
@@ -21,31 +21,31 @@ class BangunDatar:
 
 
 class Persegi(BangunDatar):
-    def hitung_luas(self, sisi):
+    def luas_bgndatar(self, sisi):
         self.luas = sisi**2
         return self.luas
 
 
 class PersegiPanjang(BangunDatar):
-    def hitung_luas(self, panjang, lebar):
+    def luas_bgndatar(self, panjang, lebar):
         self.luas = panjang * lebar
         return self.luas
 
 
 class Segitiga(BangunDatar):
-    def hitung_luas(self, alas, tinggi):
+    def luas_bgndatar(self, alas, tinggi):
         self.luas = 0.5 * alas * tinggi
         return self.luas
 
 
 class Lingkaran(BangunDatar):
-    def hitung_luas(self, jari):
+    def luas_bgndatar(self, jari):
         self.luas = 3.14 * jari**2
         return self.luas
 
 
 class Trapesium(BangunDatar):
-    def hitung_luas(self, sisi1, sisi2, tinggi):
+    def luas_bgndatar(self, sisi1, sisi2, tinggi):
         self.luas = 0.5 * sisi1 * sisi2 * tinggi
         return self.luas
 
@@ -56,19 +56,19 @@ class Trapesium(BangunDatar):
 """
 
 persegi1 = Persegi()
-persegi1.hitung_luas(10)
+persegi1.luas_bgndatar(10)
 
 persegi_panjang1 = PersegiPanjang()
-persegi_panjang1.hitung_luas(10, 20)
+persegi_panjang1.luas_bgndatar(10, 20)
 
 segitiga1 = Segitiga()
-segitiga1.hitung_luas(10, 25)
+segitiga1.luas_bgndatar(10, 25)
 
 lingkaran1 = Lingkaran()
-lingkaran1.hitung_luas(10)
+lingkaran1.luas_bgndatar(10)
 
 trapesium1 = Trapesium()
-trapesium1.hitung_luas(10, 12, 8)
+trapesium1.luas_bgndatar(10, 12, 8)
 
 """# Mengurutkan luas bangun datar
 
